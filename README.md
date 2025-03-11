@@ -108,9 +108,22 @@ Profile Page: User account settings and order history.
 
 ### Mockups
 
-Mockups will be provided in a separate folder
+#### Home Page
+![](mockups/home-page.png)
+
+#### Sign-up Page
+![](mockups/sign-up.png)
+
+#### Login Page
+![](mockups/login.png)
+
+#### Reg Caterer
+![](mockups/caterer-register.png)
 
 ### Data
+
+
+![](mockups/db.png)
 
 Users (Meal Seekers & Caterers) :
 
