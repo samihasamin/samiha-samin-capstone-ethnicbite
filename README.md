@@ -1,5 +1,7 @@
 # Project Title
 
+EthnicBite
+
 ## Overview
 
 EthnicBite is a web application designed to connect immigrants and international students in Canada with home-cooked meals from their cultural backgrounds. It serves as a bridge between individuals seeking traditional meals and local caterers or skilled home cooks who specialize in specific cuisines.
