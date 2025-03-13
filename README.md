@@ -109,19 +109,22 @@ Profile Page: User account settings and order history.
 ### Mockups
 
 #### Home Page
+
 ![](mockups/home-page.png)
 
 #### Sign-up Page
+
 ![](mockups/sign-up.png)
 
 #### Login Page
+
 ![](mockups/login.png)
 
 #### Reg Caterer
+
 ![](mockups/caterer-register.png)
 
 ### Data
-
 
 ![](mockups/db.png)
 
