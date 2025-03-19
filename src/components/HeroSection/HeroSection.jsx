@@ -1,5 +1,6 @@
 import "./HeroSection.scss";
 import HeroVideo from "/assets/videos/hero-section-video.mp4";
+import { Link } from "react-router-dom";
 
 function HeroSection() {
   return (
@@ -17,12 +18,14 @@ function HeroSection() {
             Enjoy the taste of home, away from home.
           </p>
           <div className="hero__overlay-content-buttons">
-            <button
-              className="hero__overlay-content-buttons--find"
-              aria-label="Find a Home Chef"
-            >
-              Find a Home Chef
-            </button>
+            <Link to="/caterers">
+              <button
+                className="hero__overlay-content-buttons--find"
+                aria-label="Find a Home Chef"
+              >
+                Find a Home Chef
+              </button>
+            </Link>
             <button
               className="hero__overlay-content-buttons--become"
               aria-label="Become a Home Chef"
