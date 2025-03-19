@@ -24,6 +24,17 @@ const ApiService = {
     }
   },
 
+  //Fetch all cuisines
+  async getCuisines() {
+    try {
+      const response = await axios.get(`${BASE_URL}/cuisines`);
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching cuisines:", error);
+      throw error;
+    }
+  },
+
   // Fetch caterers by cuisine type
   async getCaterersByCuisine(cuisine) {
     try {
