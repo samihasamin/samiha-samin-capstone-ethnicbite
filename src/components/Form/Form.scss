@@ -1,0 +1,17 @@
+@use "../../styles/partials/global" as *;
+
+.form__stars {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.form__star {
+  font-size: 1.8rem;
+  color: gray;
+  transition: color 0.2s ease-in-out;
+}
+
+.form__star.selected {
+  color: gold;
+}
