@@ -1,5 +1,6 @@
 import "./Header.scss";
 import { Link } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
 // import Logo from "../../assets/logo/svg/Color_logo_with_background.svg";
 
 function Header() {
@@ -26,6 +27,10 @@ function Header() {
           <Link to="/login">Log In</Link>
           <Link to="/signup" className="navbar__signup">
             Sign Up
+          </Link>
+          <Link to="/cart" className="navbar__cart">
+            <FaShoppingCart size={20} />
+            <span className="navbar__cart-count">3</span>
           </Link>
         </ul>
       </nav>

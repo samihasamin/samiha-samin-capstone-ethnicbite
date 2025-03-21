@@ -1,6 +1,8 @@
 import "./MealsOffered.scss";
+import { useNavigate } from "react-router-dom";
 
 function MealsOffered({ meals }) {
+  const navigate = useNavigate();
   return (
     <section className="meals-offered">
       <h2 className="meals-offered__title">Meals Offered</h2>
@@ -14,7 +16,12 @@ function MealsOffered({ meals }) {
           </div>
         ))}
       </div>
-      <button className="meals-offered__buttons">Place Order</button>
+      <button
+        className="meals-offered__buttons"
+        onClick={() => navigate("/order")}
+      >
+        Place Order
+      </button>
     </section>
   );
 }

@@ -2,8 +2,6 @@ import "./CaterersList.scss";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ApiService from "../../api/ApiService";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
 
 function CaterersList() {
   const [caterers, setCaterers] = useState([]);
@@ -22,7 +20,6 @@ function CaterersList() {
 
   return (
     <>
-      <Header />
       <section className="caterers-list">
         <h1 className="caterers-list__title">Our Star Chefs</h1>
         <p className="caterers-list__subtitle">
@@ -53,7 +50,6 @@ function CaterersList() {
           })}
         </div>
       </section>
-      <Footer />
     </>
   );
 }

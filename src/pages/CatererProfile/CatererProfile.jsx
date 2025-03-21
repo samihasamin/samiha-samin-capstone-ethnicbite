@@ -7,8 +7,6 @@ import CatererCard from "../../components/CatererCard/CatererCard";
 import MealsOffered from "../../components/MealsOffered/MealsOffered";
 import Form from "../../components/Form/Form";
 import ReviewsList from "../../components/ReviewsList/ReviewsList";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
 
 function CatererProfile() {
   const { id } = useParams();
@@ -31,7 +29,6 @@ function CatererProfile() {
 
   return (
     <>
-      <Header />
       <AboutMe bio={caterer.aboutMe?.bio} />
       <CatererCard
         profilePicture={caterer.profilePicture?.photo_url}
@@ -41,7 +38,6 @@ function CatererProfile() {
       <MealsOffered meals={caterer.meals} />
       <Form />
       <ReviewsList reviews={caterer.reviews} />
-      <Footer />
     </>
   );
 }

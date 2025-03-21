@@ -3,18 +3,22 @@ import HomePage from "./pages/HomePage/HomePage";
 import CaterersList from "./pages/CaterersList/CaterersList";
 import CatererProfile from "./pages/CatererProfile/CatererProfile";
 import OrderPage from "./pages/OrderPage/OrderPage";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import "./App.css";
 
 function App() {
   return (
     <>
       <Router>
+        <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/caterers/cuisine?" element={<CaterersList />} />
           <Route path="/caterers/:id" element={<CatererProfile />} />
           <Route path="/order" element={<OrderPage />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );
