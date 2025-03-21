@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 // import Logo from "../../assets/logo/svg/Color_logo_with_background.svg";
 
-function Header() {
+function Header({ cartItems }) {
   return (
     <header className="header">
       <nav className="navbar">
@@ -30,7 +30,7 @@ function Header() {
           </Link>
           <Link to="/cart" className="navbar__cart">
             <FaShoppingCart size={20} />
-            <span className="navbar__cart-count">3</span>
+            <span className="navbar__cart-count">{cartItems.length}</span>
           </Link>
         </ul>
       </nav>

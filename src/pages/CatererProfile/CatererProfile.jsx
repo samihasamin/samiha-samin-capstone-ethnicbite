@@ -8,7 +8,7 @@ import MealsOffered from "../../components/MealsOffered/MealsOffered";
 import Form from "../../components/Form/Form";
 import ReviewsList from "../../components/ReviewsList/ReviewsList";
 
-function CatererProfile() {
+function CatererProfile({ cartItems, setCartItems }) {
   const { id } = useParams();
   const [caterer, setCaterer] = useState(null);
 
@@ -35,7 +35,11 @@ function CatererProfile() {
         name={caterer.name}
         cuisine={caterer.cuisine}
       />
-      <MealsOffered meals={caterer.meals} />
+      <MealsOffered
+        meals={caterer.meals}
+        cartItems={cartItems}
+        setCartItems={setCartItems}
+      />
       <Form />
       <ReviewsList reviews={caterer.reviews} />
     </>

@@ -6,11 +6,11 @@ function OrderTotal({ cartItems }) {
 
   let subtotal = 0;
   for (let i = 0; i < cartItems.length; i++) {
-    subtotal += cartItems[i].price;
+    subtotal += Number(cartItems[i].price) || 0;
   }
 
   const tax = subtotal * taxRate;
-  const total = subtotal + tax + shippingFee;
+  const total = Number(subtotal + tax + shippingFee);
 
   return (
     <>
@@ -26,7 +26,7 @@ function OrderTotal({ cartItems }) {
               <div className="order-total__cart-details">
                 <p className="order-total__cart-details-name">{item.name}</p>
                 <p className="order-total__cart-details-price">
-                  ${item.price.toFixed(2)}
+                  ${Number(item.price).toFixed(2)}
                 </p>
               </div>
             </li>
@@ -34,7 +34,7 @@ function OrderTotal({ cartItems }) {
         </ul>
         <div className="order-total__details">
           <p>
-            Subtotal: <span>${subtotal.toFixed(2)}</span>
+            Subtotal: <span>${Number(subtotal).toFixed(2)}</span>
           </p>
           <p>
             Tax: <span>${tax.toFixed(2)}</span>

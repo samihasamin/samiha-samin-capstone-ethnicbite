@@ -67,7 +67,7 @@ function OrderForm() {
               placeholder="MM/YYYY"
             />
             <input
-              type="password"
+              type="current-password"
               className="order-form__details-creditcard-code"
               name="cvv"
               placeholder="Enter 3-Digit CVV"
