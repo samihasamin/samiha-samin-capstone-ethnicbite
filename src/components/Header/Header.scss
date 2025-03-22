@@ -17,6 +17,11 @@
 .header {
   width: 100%;
   padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .navbar {
@@ -70,6 +75,10 @@
     &-cart {
       color: $text-white;
       position: relative;
+
+      @include tablet {
+        padding-left: 20px;
+      }
 
       &-link {
         color: $text-white;
@@ -153,11 +162,8 @@
 
     @include tablet {
       display: flex;
-      gap: 60px;
-
-      @include desktop {
-        gap: 380px;
-      }
+      justify-content: space-between;
+      width: 100%;
 
       li {
         list-style-type: none;

@@ -12,7 +12,9 @@ function HeroSection() {
       <div className="hero__overlay">
         <div className="hero__overlay-content">
           <h1 className="hero__overlay-content-title">
-            Find The Perfect <span>Home Cooked Meals</span> Near You
+            Find The Perfect
+            <span>Home Cooked Meals</span>
+            Near You
           </h1>
           <p className="hero__overlay-content-subtitle">
             Enjoy the taste of home, away from home.
