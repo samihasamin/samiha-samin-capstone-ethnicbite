@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
 import Logo from "/assets/logos/png/bowl-icon.png";
+import EthnicLogo from "/assets/logos/png/bowl-icon-desktop.png";
 
 function Header({ cartItems }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,6 +14,14 @@ function Header({ cartItems }) {
         <div className="navbar__logo">
           <Link to="/">
             <img src={Logo} alt="EthnicBite Logo" />
+          </Link>
+        </div>
+
+        {/* Desktop Logo */}
+
+        <div className="navbar__desktop-logo">
+          <Link to="/">
+            <img src={EthnicLogo} alt="EthnicBite Logo Desktop" />
           </Link>
         </div>
 
