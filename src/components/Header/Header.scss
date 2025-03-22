@@ -33,6 +33,10 @@
     img {
       width: 37px;
       height: auto;
+      @include tablet {
+        width: 50px;
+        height: auto;
+      }
     }
   }
 
@@ -125,6 +129,53 @@
 
   &__links {
     display: none;
+
+    @include tablet {
+      display: flex;
+      gap: 60px;
+
+      li {
+        list-style-type: none;
+      }
+
+      &-left {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        &-aboutus,
+        &-getstarted {
+          font-family: "Poppins", sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          color: $text-light;
+          list-style-type: none;
+          text-decoration: none;
+        }
+      }
+
+      &-right {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        &-cta,
+        &-login,
+        &-signup {
+          font-family: "Poppins", sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          color: $text-light;
+          list-style-type: none;
+          text-decoration: none;
+        }
+        &-signup {
+          background-color: $primary-color-main;
+          padding: 12px 20px;
+          width: 108px;
+          height: 52px;
+          border-radius: 26px;
+        }
+      }
+    }
   }
 }
 

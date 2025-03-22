@@ -81,10 +81,10 @@ function Header({ cartItems }) {
               <Link className="navbar__links-right-cta">Become a Chef</Link>
             </li>
             <li>
-              <Link>Log In</Link>
+              <Link className="navbar__links-right-login">Log In</Link>
             </li>
             <li>
-              <Link className="navbar__links-right-cta-signup">Sign Up</Link>
+              <Link className="navbar__links-right-signup">Sign Up</Link>
             </li>
           </ul>
         </div>
