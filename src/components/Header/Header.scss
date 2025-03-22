@@ -1,1 +1,155 @@
 @use "../../styles/partials/global" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  width: 100%;
+  padding: 20px;
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $bg-navbar;
+  border-radius: 40px;
+  padding: 12.8px 19.2px;
+  height: 60px;
+
+  &__logo {
+    img {
+      width: 37px;
+      height: auto;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: auto;
+
+    &-cart {
+      color: $text-white;
+      position: relative;
+
+      &-link {
+        color: $text-white;
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &:visited,
+        &:focus,
+        &:link {
+          color: $text-white;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &-hamburger {
+      font-size: 24px;
+      color: $text-white;
+      background: none;
+      border: none;
+      cursor: pointer;
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  // ✅ Cart count badge
+  &__cart-count {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background: red;
+    color: $text-white;
+    font-size: 11px;
+    padding: 3.2px 6.4px;
+    border-radius: 50%;
+  }
+
+  //   Mobile Dropdown
+
+  &__menu {
+    position: absolute;
+    top: 60px; // adjust this to sit just below navbar height
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.95);
+    border-radius: 12px;
+    padding: 0.5rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    &-items {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        a {
+          display: block;
+          padding: 12px;
+          color: $text-white;
+          text-decoration: none;
+          text-align: center;
+
+          &:visited {
+            text-decoration: none;
+            color: $text-white;
+          }
+        }
+      }
+    }
+  }
+
+  &__links {
+    display: none;
+  }
+}
+
+.navbar__menu-link {
+  text-decoration: none;
+
+  &:visited,
+  &:active,
+  &:hover,
+  &:visited,
+  &:link {
+    text-decoration: none;
+    color: $text-white;
+  }
+}
+
+.navbar__cart-link {
+  color: $text-white;
+  text-decoration: none;
+  &:hover,
+  &:active,
+  &:visited,
+  &:focus,
+  &:link {
+    color: $text-white;
+    text-decoration: none;
+  }
+}
