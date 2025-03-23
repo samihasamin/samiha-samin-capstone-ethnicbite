@@ -111,6 +111,7 @@
           font-size: 13px;
           color: $text-white;
           padding: 16px 68.5px;
+          cursor: pointer;
 
           @include tablet {
             width: 183px;
@@ -129,6 +130,7 @@
           font-family: "Poppins";
           font-size: 13px;
           color: $text-white;
+          cursor: pointer;
 
           @include tablet {
             width: 216px;
