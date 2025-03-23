@@ -8,14 +8,19 @@
   padding: 40px 20px 20px 20px;
 
   @include tablet {
-    margin: 64px 24px 32px 24px;
+    margin: 64px auto 32px auto;
     background-color: $bg-white;
-    width: 100%;
+    max-width: 720px;
     height: 94px;
     border-radius: 47px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     padding: 30px 40px;
     overflow: hidden;
+  }
+
+  @include desktop {
+    margin: 96px auto 48px auto;
+    max-width: 836px;
   }
 
   &__slider {
