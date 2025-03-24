@@ -3,24 +3,6 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-@keyframes flashing-color {
-  0% {
-    background-color: #ff8364; // Primary 400
-  }
-  25% {
-    background-color: #f8613b; // Primary 500
-  }
-  50% {
-    background-color: #e5451d; // Primary 600
-  }
-  75% {
-    background-color: #f8613b; // Primary 500
-  }
-  100% {
-    background-color: #ff8364; // Primary 400
-  }
-}
-
 .discount-banner {
   padding: 40px 20px;
   display: flex;

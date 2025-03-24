@@ -2,3 +2,154 @@
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+
+.testimonials {
+  padding: 0px 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+  @include desktop {
+    padding: 0px auto 96px auto;
+  }
+
+  &__headline {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    &-title {
+      font-size: 28px;
+      font-weight: 500;
+      color: $text-primary;
+      text-align: center;
+      line-height: 2rem;
+
+      @include tablet {
+        font-size: 32px;
+      }
+
+      span {
+        color: #e5451d;
+      }
+    }
+
+    &-subtitle {
+      font-size: 17px;
+      color: $text-secondary;
+      font-weight: 400;
+      text-align: center;
+
+      @include tablet {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      width: 100%;
+      align-items: stretch;
+    }
+    &-first,
+    &-third,
+    &-second {
+      background-color: $card-light-bg;
+      padding: 20px;
+      border-radius: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+
+      @include desktop {
+        width: 412px;
+        height: 412px;
+      }
+
+      &--title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #e5451d;
+        padding-bottom: 4px;
+        letter-spacing: 0.8px;
+
+        @include tablet {
+          min-height: 48px;
+        }
+
+        @include desktop {
+          font-size: 22px;
+        }
+      }
+
+      &--name {
+        font-size: 15px;
+        font-weight: 500;
+        color: $text-primary;
+
+        @include tablet {
+          min-height: 20px;
+        }
+
+        @include desktop {
+          font-size: 17px;
+        }
+      }
+
+      &--location {
+        font-size: 13px;
+        font-weight: 400;
+        color: $text-secondary;
+
+        @include tablet {
+          min-height: 20px;
+        }
+
+        @include desktop {
+          font-size: 15px;
+        }
+      }
+
+      &--review {
+        font-size: 14px;
+        padding-bottom: 6px;
+
+        @include tablet {
+          min-height: 100px;
+        }
+
+        @include desktop {
+          padding-top: 15px;
+          font-size: 16px;
+          width: 80%;
+        }
+      }
+
+      &--stars {
+        font-size: 18px;
+        margin-top: auto;
+        padding-top: 6px;
+      }
+    }
+
+    &-second {
+      background-color: $card-dark-bg;
+
+      &--title,
+      &--name,
+      &--location,
+      &--review {
+        color: $text-white;
+      }
+    }
+  }
+}
