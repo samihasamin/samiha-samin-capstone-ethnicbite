@@ -53,7 +53,7 @@
     }
 
     .smash-hits__meals-chingri,
-    .smash-hits__meals-tacos,
+    .smash-hits__meals-lasagna,
     .smash-hits__meals-kimchi,
     .smash-hits__meals-ratatouille,
     .smash-hits__meals-mango {
@@ -79,6 +79,12 @@
         height: 115px;
         object-fit: cover;
         border-radius: 8px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
 
         @include tablet {
           width: 320px;

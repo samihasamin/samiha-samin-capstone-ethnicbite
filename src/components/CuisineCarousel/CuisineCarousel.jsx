@@ -5,8 +5,8 @@ import { useState, useEffect, useRef } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import LeftArrow from "../../icons/arrow-left.svg?react";
-import RightArrow from "../../icons/arrow-right.svg?react";
+import LeftArrow from "../../assets/icons/arrow-left.svg?react";
+import RightArrow from "../../assets/icons/arrow-right.svg?react";
 
 function CuisineCarousel() {
   const [cuisines, setCuisines] = useState([]);

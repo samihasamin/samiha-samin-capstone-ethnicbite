@@ -1,7 +1,7 @@
 import "./HowItWorks.scss";
-import FlavorIcon from "../../icons/flavor.svg";
-import TailorIcon from "../../icons/tailor.svg";
-import SavorIcon from "../../icons/savor.svg";
+import FlavorIcon from "../../assets/icons/flavor.svg";
+import TailorIcon from "../../assets/icons/tailor.svg";
+import SavorIcon from "../../assets/icons/savor.svg";
 
 function HowItWorks() {
   return (
