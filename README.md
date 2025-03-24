@@ -1,6 +1,7 @@
 # Project Title
 
-EthnicBite
+🍽️ EthnicBite
+EthnicBite is a web application designed to connect immigrants and international students in Canada with authentic, home-cooked meals that reflect their cultural heritage. It serves as a bridge between individuals seeking comfort food from home and local home chefs offering traditional cuisines.
 
 # Overview
 
@@ -39,31 +40,26 @@ Supporting diverse dietary preferences and restrictions (e.g., vegetarian, halal
 
 # Features
 
-User Authentication:
+Current Features
+Landing Page: Welcomes users and highlights key features.
 
-Users can sign up/login as a meal seeker or caterer.
+Find a Home Chef: Directs users to a list of available caterers/home chefs.
 
-Meal Posting & Requests:
+Caterers List Page: Displays all caterers with their cuisine specialties.
 
-Meal seekers can browse available meals or post specific meal requests.
+Caterer Profile Page:
 
-Caterers can list meals they offer along with pricing and availability.
+About Me section
 
-Search & Filtering:
+Meals Offered with meal images and pricing
 
-Users can search for meals based on cuisine, dietary restrictions, location, and price.
+Customer Reviews
 
-Order & Communication System:
+Option to select meals and proceed to order
 
-Meal seekers can place orders and communicate with caterers through an in-app messaging system.
+Order Page: Displays selected meals, total price, and a form to collect user information for placing the order (no payment functionality yet).
 
-Reviews & Ratings:
-
-Users can rate and review meals and caterers to ensure quality and trust.
-
-Secure Payments (Future Implementation):
-
-Users will be able to make payments directly through the platform.
+Note: User authentication and login/signup are planned for future development.
 
 ## Implementation
 
@@ -75,55 +71,27 @@ Backend: Node.js, Express.js
 
 Database: MySQL
 
-Authentication: Firebase Authentication or JWT-based auth
-
-Hosting: Netlify (Frontend), Heroku (Backend)
-
 Version Control: Git/GitHub
 
 ### APIs
 
-Google Maps API (for location-based filtering)
-
-Firebase Authentication API (for user authentication)
-
-(Optional) Payment API (Stripe or PayPal for future implementation)
+Backend Server.
 
 ### Sitemap
 
-Home Page: Overview of the platform, search bar, and featured meals.
+Homepage: Hero section, cuisine carousel, and more
 
-Login/Signup Page: User authentication.
+Caterers List Page (/caterers): List of all chefs
 
-Dashboard:
+Caterer Profile Page (/caterer/:id): Details about the chef, meals, and reviews
 
--- > Meal seekers: Browse meals, request meals.
-
--- > Caterers: Manage meal listings, orders.
-
-Meal Details Page: Individual meal listings with details, pricing, and order options.
-
-Order Page: Order summary and messaging system.
-
-Profile Page: User account settings and order history.
+Order Page (/order): Order summary and user info form
 
 ### Mockups
 
 Home Page
 
-![img] (mockups/home-page.png)
-
-Sign-up Page
-
-![img] (mockups/sign-up.png)
-
-Login Page
-
-![img] (mockups/login.png)
-
-Registration Caterer
-
-![img] (mockups/caterer-register.png)
+(See PDF in mockups)
 
 ### Data
 
@@ -281,10 +249,16 @@ Explain future development plans
 
 ## Future Implementations
 
-Payment Integration
+User Authentication (Signup/Login)
 
-Subscription Model
+Meal filtering (by cuisine, price, dietary restrictions)
+
+Customer review submission & ratings
+
+Payment Integration (Stripe/PayPal)
+
+Chef dashboard to manage meals and orders
+
+Multilingual support
 
 Mobile App
-
-Multilingual Support
