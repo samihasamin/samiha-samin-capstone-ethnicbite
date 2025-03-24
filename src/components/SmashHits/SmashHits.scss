@@ -2,3 +2,67 @@
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+
+.smash-hits {
+  &__headline {
+    padding: 20px;
+    text-align: center;
+
+    &-title {
+      font-family: "Poppins";
+      font-size: 24px;
+      font-weight: 600;
+      color: $text-primary;
+      line-height: 1.5rem;
+
+      span {
+        color: $primary-color-main;
+      }
+    }
+
+    &-description {
+      padding-top: 8px;
+      font-size: 16px;
+      color: $text-secondary;
+    }
+  }
+
+  &__meals {
+    padding: 0 12px;
+
+    .scroll-menu-wrapper {
+      overflow: hidden;
+    }
+
+    .smash-hits__meals-chingri,
+    .smash-hits__meals-tacos,
+    .smash-hits__meals-kimchi,
+    .smash-hits__meals-ratatouille,
+    .smash-hits__meals-mango {
+      flex: 0 0 auto;
+      //   margin-right: 12px;
+      //   background-color: $card-light-bg;
+      height: 145px;
+      width: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      //   padding: 5px;
+      border-radius: 8px;
+
+      img {
+        width: 150px;
+        height: 115px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      p {
+        font-size: 15px;
+        color: $text-primary;
+        padding-top: 5px;
+      }
+    }
+  }
+}

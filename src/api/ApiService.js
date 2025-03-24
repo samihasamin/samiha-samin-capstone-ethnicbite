@@ -80,6 +80,18 @@ const ApiService = {
       throw error;
     }
   },
+
+  // Fetch Meals
+
+  async getMeals() {
+    try {
+      const response = await axios.get(`${BASE_URL}/meals`);
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching meals:", error);
+      throw error;
+    }
+  },
 };
 
 export default ApiService;
