@@ -1,1 +1,95 @@
 @use "../../styles/partials/global" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.order-form {
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 60%;
+    &__title {
+      font-size: 32px;
+      font-weight: 500;
+      color: $text-primary;
+    }
+
+    &__details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      &-name,
+      &-address,
+      &-phone,
+      &-email {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        &-label {
+          font-size: 14px;
+          font-weight: 600;
+          color: $text-primary;
+        }
+
+        &-input {
+          width: 100%;
+          height: 45px;
+          border: 1px solid $primary-color-main;
+          border-radius: 12px;
+
+          &::placeholder {
+            font-size: 13px;
+            font-weight: 400;
+            color: $text-secondary;
+            padding: 8px;
+          }
+
+          &:focus,
+          &:active {
+            border: 2px solid #e5451d;
+            outline: none;
+          }
+        }
+      }
+
+      &-creditcard {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &-label {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          font-size: 14px;
+          font-weight: 600;
+          color: $text-primary;
+
+          input.order-form__details-creditcard-name,
+          input.order-form__details-creditcard-number,
+          input.order-form__details-creditcard-date,
+          input.order-form__details-creditcard-code {
+            width: 100%;
+            height: 45px;
+            border: 1px solid $primary-color-main;
+            border-radius: 12px;
+
+            &::placeholder {
+              font-size: 13px;
+              font-weight: 400;
+              color: $text-secondary;
+              padding: 8px;
+            }
+
+            &:focus,
+            &:active {
+              border: 2px solid #e5451d;
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

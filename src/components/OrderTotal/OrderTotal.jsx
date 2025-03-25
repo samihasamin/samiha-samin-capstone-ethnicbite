@@ -60,8 +60,10 @@ function OrderTotal({ cartItems }) {
             Total: <span>${total.toFixed(2)}</span>
           </h3>
         </div>
+        <div className="order-total__action">
+          <button className="order-total__action-checkout">Checkout</button>
+        </div>
       </div>
-      <button className="order-total__checkout">Checkout</button>
     </>
   );
 }

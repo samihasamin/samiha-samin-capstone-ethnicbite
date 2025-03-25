@@ -1,1 +1,26 @@
 @use "../../styles/partials/global" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.order-total {
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    &__cart {
+      &-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 16px;
+        &-image {
+          width: 100px;
+          height: 100px;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+}
