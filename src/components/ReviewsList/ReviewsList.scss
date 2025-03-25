@@ -1,1 +1,57 @@
 @use "../../styles/partials/global" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.reviews {
+  @include desktop {
+    padding: 0 218.5px 0 218.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    &__title {
+      &-count {
+        font-weight: 600;
+        font-size: 20px;
+        color: $text-primary;
+      }
+    }
+
+    &__section {
+      &-list {
+        list-style-type: none;
+        padding-left: 0;
+        &-reviewbox {
+          border-top: 1px solid darkgray;
+          padding: 10px 0px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          &-top {
+            display: flex;
+            justify-content: space-between;
+            &-name,
+            &-date {
+              font-size: 15px;
+              font-weight: 600;
+              color: $text-secondary;
+            }
+          }
+
+          &-rating {
+            color: #f6c000;
+            font-size: 16px;
+          }
+
+          &-review {
+            &-text {
+              font-size: 17px;
+              color: $text-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}

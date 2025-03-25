@@ -29,7 +29,7 @@ function ReviewsList({ reviews }) {
               <div className="reviews__section-list-reviewbox-rating">
                 {Array.from({ length: review.rating }, (_, i) => (
                   <span key={i} className="reviews__star">
-                    ⭐
+                    ★
                   </span>
                 ))}
               </div>
