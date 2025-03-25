@@ -1,6 +1,11 @@
 import "./OrderTotal.scss";
+import { useState, useEffect } from "react";
 
 function OrderTotal({ cartItems }) {
+  const [coupon, setCoupon] = useState("");
+  const [discountApplied, setDiscountApplied] = useState(false);
+  const [message, setMessage] = useState("");
+
   const taxRate = 0.13;
   const shippingFee = 2.0;
 
@@ -10,7 +15,8 @@ function OrderTotal({ cartItems }) {
   }
 
   const tax = subtotal * taxRate;
-  const total = Number(subtotal + tax + shippingFee);
+  const discount = discountApplied ? (subtotal + tax + shippingFee) * 0.5 : 0;
+  const total = subtotal + tax + shippingFee - discount;
 
   return (
     <>
@@ -55,12 +61,31 @@ function OrderTotal({ cartItems }) {
             name="coupon"
             id="coupon"
             placeholder="Enter Coupon Code"
+            value={coupon}
+            onChange={(e) => setCoupon(e.target.value)}
           />
           <div className="order-total__coupon-discount">
-            <button className="order-total__coupon-discount-apply">
+            <button
+              className="order-total__coupon-discount-apply"
+              onClick={() => {
+                if (coupon.trim().toUpperCase() === "ETHNIC50") {
+                  setDiscountApplied(true);
+                  setMessage("✅ Success! Coupon code applied!");
+                } else {
+                  setMessage("❌ Invalid coupon code.");
+                }
+              }}
+            >
               Apply
             </button>
           </div>
+          <p
+            className={`order-total__coupon-message ${
+              message.includes("Invalid") ? "error" : ""
+            }`}
+          >
+            {message}
+          </p>
         </div>
         <div className="order-total__final">
           <h3>

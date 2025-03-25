@@ -5,23 +5,23 @@ import ApiService from "../../api/ApiService";
 
 function CaterersList() {
   const [caterers, setCaterers] = useState([]);
-  const { cuisine } = useParams();
+  const { type } = useParams();
 
   useEffect(() => {
     async function fetchCaterers() {
       try {
-        const response = cuisine
-          ? await ApiService.getCaterersByCuisine(cuisine)
+        const response = type
+          ? await ApiService.getCaterersByCuisine(type)
           : await ApiService.getCaterers();
 
         setCaterers(response);
-        console.log(cuisine);
+        console.log("Cuisine type from URL:", type);
       } catch (error) {
         console.error("Error fetching caterers:", error);
       }
     }
     fetchCaterers();
-  }, [cuisine]);
+  }, [type]);
 
   return (
     <>

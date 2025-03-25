@@ -24,14 +24,13 @@ function MealsOffered({ meals, cartItems, setCartItems }) {
         {meals.map((meal) => (
           <div key={meal.id} className="meals-offered__grid-card">
             <div className="meals-offered__grid-card-image">
-              <img src={`/assets/images/${meal.image_url}`} alt={meal.name} />
+              <img
+                src={`/assets/images/${meal.image_url}`}
+                alt={meal.name}
+                onClick={() => handleAddCart(meal)}
+              />
             </div>
-            <h3
-              className="meals-offered__grid-card-name"
-              onClick={() => handleAddCart(meal)}
-            >
-              {meal.name}
-            </h3>
+            <h3 className="meals-offered__grid-card-name">{meal.name}</h3>
             <p className="meals-offered__grid-card-price">
               ${Number(meal.price).toFixed(2)}
             </p>
