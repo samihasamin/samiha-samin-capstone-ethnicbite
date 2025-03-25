@@ -9,8 +9,12 @@ function MealsOffered({ meals, cartItems, setCartItems }) {
       console.log("Meal price is missing", meal);
       return;
     }
+    const updatedMeal = {
+      ...meal,
+      image_url: `/assets/images/${meal.image_url}`,
+    };
     console.log("Adding to cart:", meal);
-    setCartItems([...cartItems, meal]);
+    setCartItems([...cartItems, updatedMeal]);
   };
 
   return (

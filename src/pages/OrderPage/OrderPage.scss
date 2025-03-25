@@ -1,1 +1,10 @@
 @use "../../styles/partials/global" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.order-page {
+  display: flex;
+  gap: 24px;
+  padding: 180px 80px 80px 80px;
+}
