@@ -1,1 +1,77 @@
 @use "../../styles/partials/global" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.caterers-list {
+  @include desktop {
+    padding-top: 170px;
+    padding-bottom: 192px;
+
+    &__title {
+      font-size: 36px;
+      font-weight: 500;
+      text-align: center;
+      color: $text-primary;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+      font-weight: 400;
+      text-align: center;
+      color: $text-secondary;
+    }
+
+    &__search {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0px 48px 0px;
+
+      input {
+        border: 1px solid $primary-color-main;
+        width: 528px;
+        height: 60px;
+        border-radius: 8px;
+
+        &::placeholder {
+          padding: 20px;
+          font-size: 14px;
+          font-family: "Poppins";
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 23px;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      width: 380px;
+      height: 380px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: $text-primary;
+    }
+
+    p {
+      font-size: 15px;
+      font-weight: 400;
+      color: $text-secondary;
+    }
+  }
+}

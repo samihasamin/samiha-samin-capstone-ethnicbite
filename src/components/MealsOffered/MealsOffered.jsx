@@ -20,7 +20,7 @@ function MealsOffered({ meals, cartItems, setCartItems }) {
         {meals.map((meal) => (
           <div key={meal.id} className="meals-offered__grid-card">
             <div className="meals-offered__grid-card-image">
-              {/* <img src="/assets/images/placeholder.jpg" alt={meal.name}/> */}
+              <img src={`/assets/images/${meal.image_url}`} alt={meal.name} />
             </div>
             <h3
               className="meals-offered__grid-card-name"

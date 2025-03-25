@@ -5,7 +5,7 @@ function AboutMe({ bio }) {
     <section className="about-me">
       <div className="about-me__content">
         <h2 className="about-me__content-title">About Me</h2>
-        <p>{bio}</p>
+        <p className="about-me__content-bio">{bio}</p>
       </div>
     </section>
   );

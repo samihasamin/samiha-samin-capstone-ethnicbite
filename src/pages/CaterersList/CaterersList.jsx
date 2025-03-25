@@ -33,16 +33,7 @@ function CaterersList() {
             console.log("Image Path:", caterer.photo_url);
             return (
               <Link key={caterer.id} to={`/caterers/${caterer.id}`}>
-                <img
-                  src={caterer.photo_url}
-                  alt={caterer.name}
-                  style={{
-                    width: "250px",
-                    height: "250px",
-                    objectFit: "cover",
-                    borderRadius: "8px",
-                  }}
-                />
+                <img src={caterer.photo_url} alt={caterer.name} />
                 <h3>{caterer.name}</h3>
                 <p>{caterer.cuisine} Food</p>
               </Link>

@@ -1,1 +1,26 @@
 @use "../../styles/partials/global" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.about-me {
+  @include desktop {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      &-title {
+        font-size: 36px;
+        font-weight: 500;
+        color: $text-primary;
+      }
+
+      &-bio {
+        font-size: 18px;
+        font-weight: 400;
+        color: $text-primary;
+        width: 90%;
+      }
+    }
+  }
+}

@@ -28,13 +28,15 @@ function CatererProfile({ cartItems, setCartItems }) {
   if (!caterer) return <p>Loading...</p>;
 
   return (
-    <>
-      <AboutMe bio={caterer.aboutMe?.bio} />
-      <CatererCard
-        profilePicture={caterer.profilePicture?.photo_url}
-        name={caterer.name}
-        cuisine={caterer.cuisine}
-      />
+    <section className="caterer-profile">
+      <div className="caterer-profile__top">
+        <AboutMe bio={caterer.aboutMe?.bio} />
+        <CatererCard
+          profilePicture={caterer.profilePicture?.photo_url}
+          name={caterer.name}
+          cuisine={caterer.cuisine}
+        />
+      </div>
       <MealsOffered
         meals={caterer.meals}
         cartItems={cartItems}
@@ -42,7 +44,7 @@ function CatererProfile({ cartItems, setCartItems }) {
       />
       <Form />
       <ReviewsList reviews={caterer.reviews} />
-    </>
+    </section>
   );
 }
 
