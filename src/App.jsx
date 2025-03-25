@@ -16,7 +16,7 @@ function App() {
         <Header cartItems={cartItems} />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/caterers/cuisine?" element={<CaterersList />} />
+          <Route path="/caterers" element={<CaterersList />} />
           <Route
             path="/caterers/:id"
             element={
@@ -26,6 +26,7 @@ function App() {
               />
             }
           />
+          <Route path="/caterers/cuisine/:type" element={<CaterersList />} />
           <Route path="/order" element={<OrderPage cartItems={cartItems} />} />
         </Routes>
         <Footer />

@@ -107,23 +107,21 @@
     }
   }
 
-  // ✅ Cart count badge
   &__cart-count {
     position: absolute;
     top: -5px;
     right: -8px;
     background: red;
     color: $text-white;
-    font-size: 11px;
-    padding: 3.2px 6.4px;
+    font-size: 10px;
+    padding: 2px 5px;
     border-radius: 50%;
+    line-height: 1;
   }
-
-  //   Mobile Dropdown
 
   &__menu {
     position: absolute;
-    top: 60px; // adjust this to sit just below navbar height
+    top: 60px;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;

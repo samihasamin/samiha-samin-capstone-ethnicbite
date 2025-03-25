@@ -1,22 +1,27 @@
 import "./CaterersList.scss";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ApiService from "../../api/ApiService";
 
 function CaterersList() {
   const [caterers, setCaterers] = useState([]);
+  const { cuisine } = useParams();
 
   useEffect(() => {
     async function fetchCaterers() {
       try {
-        const response = await ApiService.getCaterers();
+        const response = cuisine
+          ? await ApiService.getCaterersByCuisine(cuisine)
+          : await ApiService.getCaterers();
+
         setCaterers(response);
+        console.log(cuisine);
       } catch (error) {
         console.error("Error fetching caterers:", error);
       }
     }
     fetchCaterers();
-  }, []);
+  }, [cuisine]);
 
   return (
     <>

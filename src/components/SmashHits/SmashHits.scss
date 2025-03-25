@@ -58,15 +58,12 @@
     .smash-hits__meals-ratatouille,
     .smash-hits__meals-mango {
       flex: 0 0 auto;
-      //   margin-right: 12px;
-      //   background-color: $card-light-bg;
       height: 145px;
       width: 180px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      //   padding: 5px;
       border-radius: 8px;
 
       @include tablet {

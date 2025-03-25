@@ -83,7 +83,7 @@ function CuisineCarousel() {
           console.log("icon:", cuisine.icon_url);
           return (
             <Link
-              // to={`/caterers/${cuisine.type.toLowerCase()}`}
+              to={`/caterers/cuisine/${cuisine.type.toLowerCase()}`}
               key={cuisine.id}
               className="cuisine-carousel__slider-item"
             >
