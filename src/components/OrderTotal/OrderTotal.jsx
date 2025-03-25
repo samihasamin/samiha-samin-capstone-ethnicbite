@@ -23,9 +23,11 @@ function OrderTotal({ cartItems }) {
                 alt={item.name}
                 className="order-total__cart-item-image"
               />
-              <div className="order-total__cart-details">
-                <p className="order-total__cart-details-name">{item.name}</p>
-                <p className="order-total__cart-details-price">
+              <div className="order-total__cart-item-details">
+                <p className="order-total__cart-item-details--name">
+                  {item.name}
+                </p>
+                <p className="order-total__cart-item-details--price">
                   ${Number(item.price).toFixed(2)}
                 </p>
               </div>
@@ -52,8 +54,13 @@ function OrderTotal({ cartItems }) {
             type="text"
             name="coupon"
             id="coupon"
+            placeholder="Enter Coupon Code"
           />
-          <button className="order-total__coupon-apply">Apply</button>
+          <div className="order-total__coupon-discount">
+            <button className="order-total__coupon-discount-apply">
+              Apply
+            </button>
+          </div>
         </div>
         <div className="order-total__final">
           <h3>
