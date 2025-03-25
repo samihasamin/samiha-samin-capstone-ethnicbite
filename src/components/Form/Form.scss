@@ -40,7 +40,7 @@
           border-radius: 12px;
           &:focus,
           &:active {
-            border: 2px solid #e5451d;
+            border: 2px solid $primary-color-main;
             outline: none;
           }
         }
@@ -53,7 +53,7 @@
           resize: none;
           &:focus,
           &:active {
-            border: 2px solid #e5451d;
+            border: 2px solid $primary-color-main;
             outline: none;
           }
         }
@@ -87,23 +87,31 @@
           }
         }
       }
-    }
-
-    &__button {
-      display: flex;
-      justify-content: flex-end;
-      &-submit {
-        background-color: $primary-color-main;
-        width: 134px;
-        height: 56px;
-        border-radius: 28px;
-        font-size: 16px;
-        font-weight: 500;
-        color: $text-white;
-        text-align: center;
-        border: none;
-        cursor: pointer;
+      &-button {
+        display: flex;
+        justify-content: flex-end;
+        &-submit {
+          background-color: $primary-color-main;
+          width: 134px;
+          height: 56px;
+          border-radius: 28px;
+          font-size: 16px;
+          font-weight: 500;
+          color: $text-white;
+          text-align: center;
+          border: none;
+          cursor: pointer;
+        }
       }
     }
   }
+}
+
+.form__error {
+  color: red;
+  font-weight: 500;
+}
+
+.error-border {
+  border: 2px solid red;
 }

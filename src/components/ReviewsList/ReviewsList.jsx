@@ -16,7 +16,7 @@ function ReviewsList({ reviews }) {
       </div>
       <div className="reviews__section">
         <ul className="reviews__section-list">
-          {reviews.map((review, index) => (
+          {[...reviews].reverse().map((review, index) => (
             <li key={index} className="reviews__section-list-reviewbox">
               <div className="reviews__section-list-reviewbox-top">
                 <p className="reviews__section-list-reviewbox-top-name">

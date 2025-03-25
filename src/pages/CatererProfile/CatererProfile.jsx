@@ -11,6 +11,7 @@ import ReviewsList from "../../components/ReviewsList/ReviewsList";
 function CatererProfile({ cartItems, setCartItems }) {
   const { id } = useParams();
   const [caterer, setCaterer] = useState(null);
+  const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
     async function fetchCatererData() {
@@ -18,6 +19,7 @@ function CatererProfile({ cartItems, setCartItems }) {
         const response = await ApiService.getCatererById(id);
         console.log("Fetched Caterer Data:", response);
         setCaterer(response);
+        setReviews(response.reviews);
       } catch (error) {
         console.error("Error fetching caterer data:", error);
       }
@@ -42,8 +44,8 @@ function CatererProfile({ cartItems, setCartItems }) {
         cartItems={cartItems}
         setCartItems={setCartItems}
       />
-      <Form />
-      <ReviewsList reviews={caterer.reviews} />
+      <Form catererId={caterer.id} setReviews={setReviews} />
+      <ReviewsList reviews={reviews} />
     </section>
   );
 }

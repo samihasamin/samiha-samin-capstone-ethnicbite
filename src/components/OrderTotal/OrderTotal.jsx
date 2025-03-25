@@ -70,9 +70,9 @@ function OrderTotal({ cartItems }) {
               onClick={() => {
                 if (coupon.trim().toUpperCase() === "ETHNIC50") {
                   setDiscountApplied(true);
-                  setMessage("✅ Success! Coupon code applied!");
+                  setMessage("✅Success! Coupon code applied!");
                 } else {
-                  setMessage("❌ Invalid coupon code.");
+                  setMessage("❌Invalid coupon code.");
                 }
               }}
             >
