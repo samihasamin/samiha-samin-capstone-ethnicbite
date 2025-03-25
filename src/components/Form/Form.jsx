@@ -57,7 +57,7 @@ function Form() {
                   aria-label={`${star} stars`}
                   tabIndex="0"
                 >
-                  ⭐
+                  ★
                 </span>
               </label>
             ))}

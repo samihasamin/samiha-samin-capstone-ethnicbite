@@ -34,12 +34,14 @@ function MealsOffered({ meals, cartItems, setCartItems }) {
           </div>
         ))}
       </div>
-      <button
-        className="meals-offered__buttons"
-        onClick={() => navigate("/order")}
-      >
-        Place Order
-      </button>
+      <div className="meals-offered__actions">
+        <button
+          className="meals-offered__actions-order"
+          onClick={() => navigate("/order")}
+        >
+          Place Order
+        </button>
+      </div>
     </section>
   );
 }

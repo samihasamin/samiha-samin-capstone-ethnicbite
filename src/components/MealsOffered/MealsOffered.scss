@@ -30,6 +30,12 @@
             height: 100%;
             object-fit: cover;
             border-radius: 12px;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+              transform: scale(1.09);
+              cursor: pointer;
+            }
           }
         }
 
@@ -38,6 +44,10 @@
           font-weight: 500;
           word-wrap: break-word;
           margin-top: 8px;
+
+          &:hover {
+            cursor: pointer;
+          }
         }
 
         &-price {
@@ -45,6 +55,24 @@
           font-weight: 400;
           color: $text-secondary;
         }
+      }
+    }
+
+    &__actions {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 50px;
+      &-order {
+        background-color: $primary-color-main;
+        width: 134px;
+        height: 56px;
+        border-radius: 28px;
+        font-size: 16px;
+        font-weight: 500;
+        color: $text-white;
+        text-align: center;
+        border: none;
+        cursor: pointer;
       }
     }
   }
