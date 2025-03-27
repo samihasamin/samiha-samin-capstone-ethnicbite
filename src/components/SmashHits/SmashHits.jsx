@@ -35,9 +35,9 @@ function SmashHits() {
             <img src="/assets/images/chingri.jpg" alt="Chingri Malai" />
             <p>Chingri Malai Curry</p>
           </div>
-          <div className="smash-hits__meals-lasagna">
-            <img src="/assets/images/lasagna.jpg" alt="Lasagna" />
-            <p>Lasagna</p>
+          <div className="smash-hits__meals-omali">
+            <img src="/assets/images/omali.jpg" alt="Omali" />
+            <p>Om Ali</p>
           </div>
           <div className="smash-hits__meals-kimchi">
             <img src="/assets/images/kimchi_jjigae.jpg" alt="Kimchi Jjigae" />
