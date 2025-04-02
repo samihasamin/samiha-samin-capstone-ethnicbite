@@ -262,3 +262,7 @@ Chef dashboard to manage meals and orders
 Multilingual support
 
 Mobile App
+
+## Link to Backend
+
+https://github.com/samihasamin/-samiha-samin-capstone-ethnicbite-backend
